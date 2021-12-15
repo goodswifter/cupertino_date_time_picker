@@ -314,7 +314,7 @@ class _DateTimePickerWidgetState extends State<DateTimePickerWidget> {
   /// change the selection of minute picker
   void _changeMinuteSelection(int index) {
     int value = _minuteRange.first + index * _minuteDivider;
-    print('_changeMinuteSelection $index ${_minuteRange.first}');
+    debugPrint('_changeMinuteSelection $index ${_minuteRange.first}');
     if (_currMinute != value) {
       _currMinute = value;
       _changeTimeRange();

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import './date_picker_bottom_sheet.dart';
-import './date_picker_in_page.dart';
-import 'date_time_picker_bottom_sheet.dart';
-import 'date_time_picker_in_page.dart';
-import './time_picker_bottom_sheet.dart';
-import './time_picker_in_page.dart';
+import 'date&time/date_time_picker_bottom_sheet.dart';
+import 'date&time/date_time_picker_in_page.dart';
+import 'date/date_picker_bottom_sheet.dart';
+import 'date/date_picker_in_page.dart';
+import 'time/time_picker_bottom_sheet.dart';
+import 'time/time_picker_in_page.dart';
 
 class CupertinoDateTimePage extends StatelessWidget {
   const CupertinoDateTimePage({Key? key}) : super(key: key);
@@ -21,6 +21,7 @@ class CupertinoDateTimePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            buildTitle(title: '日期'),
             ElevatedButton(
               child: Text("DatePicker Bottom Sheet", style: textStyle),
               onPressed: () {
@@ -39,6 +40,7 @@ class CupertinoDateTimePage extends StatelessWidget {
                 }));
               },
             ),
+            buildTitle(title: '时间'),
             ElevatedButton(
               child: Text("TimePicker Bottom Sheet", style: textStyle),
               onPressed: () {
@@ -57,6 +59,7 @@ class CupertinoDateTimePage extends StatelessWidget {
                 }));
               },
             ),
+            buildTitle(title: '日期 + 时间'),
             ElevatedButton(
               child: Text("DateTimePicker Bottom Sheet", style: textStyle),
               onPressed: () {
@@ -76,6 +79,18 @@ class CupertinoDateTimePage extends StatelessWidget {
               },
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  buildTitle({String title = ''}) {
+    return SizedBox(
+      height: 40,
+      child: Center(
+        child: Text(
+          title,
+          style: const TextStyle(fontSize: 20),
         ),
       ),
     );

@@ -203,8 +203,8 @@ class _DatePickerBottomSheetState extends State<DatePickerBottomSheet> {
       initialDateTime: _dateTime,
       dateFormat: _format,
       locale: _locale!,
-      onClose: () => print("----- onClose -----"),
-      onCancel: () => print('onCancel'),
+      onClose: () => debugPrint("----- onClose -----"),
+      onCancel: () => debugPrint('onCancel'),
       onChange: (dateTime, List<int> index) {
         setState(() {
           _dateTime = dateTime;
