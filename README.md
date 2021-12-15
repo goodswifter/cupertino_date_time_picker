@@ -330,6 +330,6 @@ const DateTimePickerTheme({
 [1]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_picker01.png?raw=true
 [2]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_picker02.png?raw=true
 [3]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/time_picker01.png?raw=true
-[3]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/time_picker02.png?raw=true
-[3]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_time01.png?raw=true
-[3]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_time02.png?raw=true
+[4]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/time_picker02.png?raw=true
+[5]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_time01.png?raw=true
+[6]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_time02.png?raw=true
