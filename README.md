@@ -315,15 +315,11 @@ const DateTimePickerTheme({
 ![Example: DatePickerWidget][2]
 
 ### TimePicker
-
 ![Example: TimePicker][3]
-
 ![Example: TimePickerWidget][4]
 
 ### DateTimePicker
-
 ![Example: DateTimePicker][5]
-
 ![Example: DateTimePickerWidget][6]
 
 
