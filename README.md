@@ -327,7 +327,7 @@ const DateTimePickerTheme({
 ![Example: DateTimePickerWidget][6]
 
 
-[1]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_picker01.png?raw=true#pic_left
+[1]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_picker01.png?raw=true
 [2]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/date_picker02.png?raw=true
 [3]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/time_picker01.png?raw=true
 [4]:https://github.com/goodswifter/cupertino_date_time_picker/blob/master/assets/time_picker02.png?raw=true
