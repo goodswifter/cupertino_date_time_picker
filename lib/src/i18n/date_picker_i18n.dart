@@ -74,12 +74,15 @@ abstract class _StringsI18n {
 
 enum DateTimePickerLocale {
   /// English (EN) United States
+  // ignore: constant_identifier_names
   en_us,
 
   /// Chinese (ZH) Simplified
+  // ignore: constant_identifier_names
   zh_cn,
 
   /// Portuguese (PT) Brazil
+  // ignore: constant_identifier_names
   pt_br,
 
   /// Indonesia (ID)
@@ -107,6 +110,7 @@ enum DateTimePickerLocale {
   ar,
 
   /// Arabic (ar) Egypt
+  // ignore: constant_identifier_names
   ar_eg,
 
   /// Japanese (JP)
@@ -140,9 +144,11 @@ enum DateTimePickerLocale {
   vi,
 
   /// Serbia (sr) Cyrillic
+  // ignore: constant_identifier_names
   sr_cyrl,
 
   /// Serbia (sr) Latin
+  // ignore: constant_identifier_names
   sr_latn,
 
   /// Dutch (NL)

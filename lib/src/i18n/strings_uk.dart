@@ -44,6 +44,7 @@ class _StringsUk extends _StringsI18n {
       "Вівторок",
       "Середа",
       "Четвер",
+      // ignore: unnecessary_string_escapes
       "П\'ятниця",
       "Субота",
       "Неділя",

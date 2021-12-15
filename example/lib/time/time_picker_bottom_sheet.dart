@@ -158,18 +158,13 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
           decoration: const BoxDecoration(color: Color(0xFFEFEFEF)),
           height: 50,
           width: double.infinity,
-          child: const Text('data'),
+          child: const Center(
+            child: Text(
+              'custom Title',
+              style: TextStyle(color: Colors.green, fontSize: 24.0),
+            ),
+          ),
         ),
-        // title: Container(
-        //   decoration: const BoxDecoration(color: Color(0xFFEFEFEF)),
-        //   width: double.infinity,
-        //   height: 56.0,
-        //   alignment: Alignment.center,
-        //   child: const Text(
-        //     'custom Title',
-        //     style: TextStyle(color: Colors.green, fontSize: 24.0),
-        //   ),
-        // ),
         titleHeight: 56.0,
       ),
       onCancel: () {
