@@ -1,6 +1,6 @@
 name: cupertino_date_time_picker
 description: 日期时间选择器
-version: 0.0.2
+version: 0.0.4
 homepage: https://github.com/goodswifter/cupertino_date_time_picker.git
 
 environment:

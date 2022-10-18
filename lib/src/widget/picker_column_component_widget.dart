@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import '/cupertino_date_time_picker.dart';
 import '/src/date_picker_theme.dart';
 import '/src/date_time_formatter.dart';
@@ -40,8 +39,7 @@ class PickerColumnComponentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    DateTimePickerTheme;
-    Widget columnWidget = Container(
+    final Widget columnWidget = Container(
       padding: const EdgeInsets.all(8.0),
       width: double.infinity,
       height: pickerHeight,
@@ -81,8 +79,8 @@ class PickerColumnComponentWidget extends StatelessWidget {
 
   _calculateMinuteChildCount(List<int> valueRange, int divider) {
     if (divider == 0) {
-      debugPrint("Cant devide by 0");
-      return (valueRange.last - valueRange.first + 1);
+      debugPrint('Cant devide by 0');
+      return valueRange.last - valueRange.first + 1;
     }
 
     return (valueRange.last - valueRange.first + 1) ~/ divider;

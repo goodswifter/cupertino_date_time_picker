@@ -81,7 +81,7 @@ class DatePickerTitleWidget extends StatelessWidget {
 
     Widget? cancelWidget = pickerTheme.cancel;
     if (cancelWidget == null) {
-      TextStyle textStyle = pickerTheme.cancelTextStyle ??
+      final TextStyle textStyle = pickerTheme.cancelTextStyle ??
           TextStyle(
             color: Theme.of(context).unselectedWidgetColor,
             fontSize: 17.0,
@@ -96,7 +96,7 @@ class DatePickerTitleWidget extends StatelessWidget {
       height: pickerTheme.titleHeight,
       child: TextButton(
         child: cancelWidget,
-        onPressed: () => onCancel(),
+        onPressed: onCancel,
       ),
     );
   }
@@ -110,7 +110,7 @@ class DatePickerTitleWidget extends StatelessWidget {
       }
     }
 
-    TextStyle textStyle = pickerTheme.titleTextStyle ??
+    final TextStyle textStyle = pickerTheme.titleTextStyle ??
         const TextStyle(
           color: Colors.black87,
           fontSize: 17.0,
@@ -135,7 +135,7 @@ class DatePickerTitleWidget extends StatelessWidget {
 
     Widget? confirmWidget = pickerTheme.confirm;
     if (confirmWidget == null) {
-      TextStyle textStyle = pickerTheme.confirmTextStyle ??
+      final TextStyle textStyle = pickerTheme.confirmTextStyle ??
           TextStyle(
             color: Theme.of(context).primaryColor,
             fontSize: 17.0,
@@ -150,7 +150,7 @@ class DatePickerTitleWidget extends StatelessWidget {
       height: pickerTheme.titleHeight,
       child: TextButton(
         child: confirmWidget,
-        onPressed: () => onConfirm(),
+        onPressed: onConfirm,
       ),
     );
   }

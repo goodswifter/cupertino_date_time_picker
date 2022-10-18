@@ -31,8 +31,11 @@ class DateTimeFormatter {
   }
 
   /// Split date format to array.
-  static List<String> splitDateFormat(String? dateFormat,
-      {DateTimePickerMode? mode, String? dateFormatSeparator}) {
+  static List<String> splitDateFormat(
+    String? dateFormat, {
+    DateTimePickerMode? mode,
+    String? dateFormatSeparator,
+  }) {
     if (dateFormat == null || dateFormat.isEmpty) {
       return [];
     }
@@ -40,13 +43,13 @@ class DateTimeFormatter {
         dateFormat.split(RegExp(dateFormatSeparator ?? dateFormatSeparators));
     if (mode == DateTimePickerMode.dateTime) {
       // datetime mode need join day format
-      List<String> temp = [];
-      StringBuffer dayFormat = StringBuffer();
+      final List<String> temp = [];
+      final StringBuffer dayFormat = StringBuffer();
       for (int i = 0; i < result.length; i++) {
-        String format = result[i];
+        final String format = result[i];
         if (isDayFormat(format)) {
           // find format pre-separator
-          int end = dateFormat.indexOf(format);
+          final int end = dateFormat.indexOf(format);
           if (end > 0) {
             int start = 0;
             if (i > 0) {
@@ -72,7 +75,10 @@ class DateTimeFormatter {
 
   /// Format datetime string
   static String formatDateTime(
-      int value, String? format, DateTimePickerLocale locale) {
+    int value,
+    String? format,
+    DateTimePickerLocale locale,
+  ) {
     if (format == null || format.isEmpty) {
       return value.toString();
     }
@@ -114,7 +120,10 @@ class DateTimeFormatter {
 
   /// Format day display
   static String formatDate(
-      DateTime dateTime, String? format, DateTimePickerLocale locale) {
+    DateTime dateTime,
+    String? format,
+    DateTimePickerLocale locale,
+  ) {
     if (format == null || format.isEmpty) {
       return dateTime.toString();
     }
@@ -143,21 +152,29 @@ class DateTimeFormatter {
 
   /// format year text
   static String _formatYear(
-      int value, String format, DateTimePickerLocale locale) {
+    int value,
+    String format,
+    DateTimePickerLocale locale,
+  ) {
     if (format.contains('yyyy')) {
       // yyyy: the digit count of year is 4, e.g. 2019
       return format.replaceAll('yyyy', value.toString());
     } else if (format.contains('yy')) {
       // yy: the digit count of year is 2, e.g. 19
-      return format.replaceAll('yy',
-          value.toString().substring(max(0, value.toString().length - 2)));
+      return format.replaceAll(
+        'yy',
+        value.toString().substring(max(0, value.toString().length - 2)),
+      );
     }
     return value.toString();
   }
 
   /// format month text
   static String _formatMonth(
-      int value, String format, DateTimePickerLocale locale) {
+    int value,
+    String format,
+    DateTimePickerLocale locale,
+  ) {
     List<String>? months;
     if (format.contains('MMMM')) {
       // MMMM: the full name of month, e.g. January
@@ -169,7 +186,7 @@ class DateTimeFormatter {
       // MMM: the short name of month, e.g. Jan
       months = DatePickerI18n.getLocaleMonths(locale, false);
       if (months != null) {
-        String month = months[value - 1];
+        final String month = months[value - 1];
         return format.replaceAll('MMM', month);
       }
     }
@@ -179,7 +196,10 @@ class DateTimeFormatter {
 
   /// format day text
   static String _formatDay(
-      int value, String format, DateTimePickerLocale locale) {
+    int value,
+    String format,
+    DateTimePickerLocale locale,
+  ) {
     return _formatNumber(value, format, 'd');
   }
 
@@ -203,19 +223,28 @@ class DateTimeFormatter {
 
   /// format hour text
   static String _formatHour(
-      int value, String format, DateTimePickerLocale locale) {
+    int value,
+    String format,
+    DateTimePickerLocale locale,
+  ) {
     return _formatNumber(value, format, 'H');
   }
 
   /// format minute text
   static String _formatMinute(
-      int value, String format, DateTimePickerLocale locale) {
+    int value,
+    String format,
+    DateTimePickerLocale locale,
+  ) {
     return _formatNumber(value, format, 'm');
   }
 
   /// format second text
   static String _formatSecond(
-      int value, String format, DateTimePickerLocale locale) {
+    int value,
+    String format,
+    DateTimePickerLocale locale,
+  ) {
     return _formatNumber(value, format, 's');
   }
 

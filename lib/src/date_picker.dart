@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'date_picker_constants.dart';
@@ -157,8 +156,11 @@ class _DatePickerRoute<T> extends PopupRoute<T> {
   }
 
   @override
-  Widget buildPage(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation) {
+  Widget buildPage(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+  ) {
     double height = pickerTheme.pickerHeight;
     if (pickerTheme.headerWidget != null || pickerTheme.showTitle) {
       height += pickerTheme.titleHeight;
@@ -176,13 +178,14 @@ class _DatePickerRoute<T> extends PopupRoute<T> {
 }
 
 class _DatePickerComponent extends StatelessWidget {
+  const _DatePickerComponent({
+    Key? key,
+    required this.route,
+    required pickerHeight,
+  })  : _pickerHeight = pickerHeight,
+        super(key: key);
   final _DatePickerRoute route;
   final double _pickerHeight;
-
-  const _DatePickerComponent(
-      {Key? key, required this.route, required pickerHeight})
-      : _pickerHeight = pickerHeight,
-        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -213,8 +216,10 @@ class _DatePickerComponent extends StatelessWidget {
         builder: (BuildContext context, Widget? child) {
           return ClipRect(
             child: CustomSingleChildLayout(
-              delegate: _BottomPickerLayout(route.animation!.value,
-                  contentHeight: _pickerHeight),
+              delegate: _BottomPickerLayout(
+                route.animation!.value,
+                contentHeight: _pickerHeight,
+              ),
               child: pickerWidget,
             ),
           );
@@ -242,7 +247,7 @@ class _BottomPickerLayout extends SingleChildLayoutDelegate {
 
   @override
   Offset getPositionForChild(Size size, Size childSize) {
-    double height = size.height - childSize.height * progress;
+    final double height = size.height - childSize.height * progress;
     return Offset(0.0, height);
   }
 

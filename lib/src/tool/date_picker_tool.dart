@@ -9,8 +9,10 @@ const List<int> solarMonthsOf31Days = <int>[1, 3, 5, 7, 8, 10, 12];
 
 class DatePickerTool {
   /// calculate the count of day in current month
-  static int calcDayCountOfMonth(
-      {required int currentMonth, required int currentYear}) {
+  static int calcDayCountOfMonth({
+    required int currentMonth,
+    required int currentYear,
+  }) {
     if (currentMonth == 2) {
       return isLeapYear(currentYear) ? 29 : 28;
     } else if (solarMonthsOf31Days.contains(currentMonth)) {

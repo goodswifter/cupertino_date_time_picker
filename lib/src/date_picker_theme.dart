@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 /// Default value of DatePicker's background color.
 const dateTimePickerBackgroundColor = Colors.white;
@@ -27,8 +27,6 @@ const TextStyle dateTimePickerItemTextStyle =
     TextStyle(color: Color(0xFF000046), fontSize: 16.0);
 
 class DateTimePickerTheme with Diagnosticable {
-  final cancelDefault = const Text('OK');
-
   /// DateTimePicker theme.
   ///
   /// [backgroundColor] DatePicker's background color.
@@ -59,6 +57,8 @@ class DateTimePickerTheme with Diagnosticable {
     this.itemHeight = dateTimePickerItemHeight,
     this.itemTextStyle = dateTimePickerItemTextStyle,
   });
+  
+  final cancelDefault = const Text('OK');
 
   static const DateTimePickerTheme dafault = DateTimePickerTheme();
 
